@@ -7,7 +7,7 @@
   --green: #266d50;
   --green-dark: #1a4f3a;
   --lime: #d7ed9f;
-  --paper: #f6f8f4;
+  --paper: #f7f8f3;
   --white: #fff;
   --line: #e6ebe4;
   --serif: Georgia, "Noto Serif Bengali", serif;
@@ -21,7 +21,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
+  background: linear-gradient(180deg, #f8f8f2 0%, var(--paper) 420px);
   font-size: 16px;
   line-height: 1.65;
 }
@@ -93,7 +93,7 @@ button, input, select { font: inherit; }
   overflow: hidden;
   position: relative;
   padding: 36px 74px 48px;
-  background: #eaf1e4;
+  background: linear-gradient(120deg, #edf3df 0%, #e8f2e9 58%, #f6eddb 100%);
   border-radius: 20px;
 }
 
@@ -151,6 +151,51 @@ h1, h2, h3, p { margin-top: 0; }
 }
 
 .hero-link:hover { background: var(--green-dark); }
+
+.motivation-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 32px 0;
+  padding: 17px 22px;
+  background: linear-gradient(110deg, #fff8df 0%, #f2f5e8 55%, #edf5ec 100%);
+  border: 1px solid #e8e9d8;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px #344c3509;
+}
+
+.motivation-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  color: #806b2e;
+  background: #f4e7b6;
+  border-radius: 13px;
+  font-size: 22px;
+}
+
+.motivation-label {
+  margin: 0 0 2px;
+  color: #7d713f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .7px;
+}
+
+.motivation-quote {
+  margin: 0;
+  color: #344b3b;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.motivation-note {
+  margin: 2px 0 0;
+  color: #778276;
+  font-size: 12px;
+}
 
 .hero-art {
   width: 100%;
@@ -220,7 +265,7 @@ h1, h2, h3, p { margin-top: 0; }
   display: grid;
   grid-template-columns: minmax(240px, 1fr) 190px 220px;
   gap: 12px;
-  margin: -1px 32px 0;
+  margin: 14px 32px 0;
   padding: 17px;
   position: relative;
   z-index: 2;
@@ -470,7 +515,7 @@ h1, h2, h3, p { margin-top: 0; }
   gap: 55px;
   margin-top: 75px;
   padding: 43px 45px;
-  background: #eaf1e4;
+  background: linear-gradient(120deg, #edf3df, #e8f2e9);
   border-radius: 16px;
 }
 
@@ -532,6 +577,7 @@ h1, h2, h3, p { margin-top: 0; }
   .main-nav > a:first-child { display: none; }
   .hero { min-height: 375px; grid-template-columns: 1.1fr .9fr; padding: 30px 35px; }
   .hero-art { transform: scale(.85); }
+  .motivation-banner { margin-inline: 16px; }
   .search-panel { grid-template-columns: 1fr 1fr; margin-inline: 16px; }
   .search-box { grid-column: 1 / -1; }
   .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -553,7 +599,11 @@ h1, h2, h3, p { margin-top: 0; }
   .art-sun { right: 50%; transform: translateX(50%); }
   .art-book { left: 50%; }
   .art-caption { right: 50%; bottom: -34px; white-space: nowrap; transform: translateX(50%); }
-  .search-panel { grid-template-columns: 1fr; gap: 9px; margin: -1px 10px 0; padding: 12px; }
+  .motivation-banner { align-items: flex-start; gap: 11px; margin: 14px 10px 0; padding: 14px; }
+  .motivation-icon { width: 36px; height: 36px; flex-basis: 36px; border-radius: 11px; font-size: 19px; }
+  .motivation-quote { font-size: 14px; line-height: 1.6; }
+  .motivation-note { font-size: 11px; }
+  .search-panel { grid-template-columns: 1fr; gap: 9px; margin: 10px 10px 0; padding: 12px; }
   .search-box { grid-column: auto; }
   .resources-section { padding-top: 46px; }
   .section-heading { align-items: flex-start; gap: 10px; }
