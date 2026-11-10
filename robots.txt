@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jibidkumar44-stack.github.io/khadiza-pathshala/sitemap.xml
